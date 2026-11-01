@@ -39,7 +39,7 @@ namespace Maze
             BlockSprite.rectSrc = new SmoothRect(0, 0, MainLoop.TileSize, MainLoop.TileSize);
             BlockSprite.rectDest.Width = MainLoop.TileSize;
             BlockSprite.rectDest.Height = MainLoop.TileSize;
-            BlockSprite.drawBehavior = SpriteDraw.basicAnimated;
+            BlockSprite.drawBehavior = SpriteDraw.BasicAnimated;
 
             // Crates occlude.
             Lighting = new(null, new(TileHull));

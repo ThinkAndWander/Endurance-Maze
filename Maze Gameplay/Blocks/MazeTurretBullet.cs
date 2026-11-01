@@ -43,7 +43,7 @@ namespace Maze
             //Sets sprite information.
             BlockSprite = new Sprite(true, TexTurretBullet);
             BlockSprite.depth = 0.2f;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             BlockSprite.CenterOrigin();
 
             // Lasers cast their own light source.

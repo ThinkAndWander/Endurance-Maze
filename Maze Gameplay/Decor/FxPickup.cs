@@ -24,7 +24,7 @@ namespace Maze
             BlockSprite.rectSrc = new SmoothRect(MainLoop.TileSize, 0, MainLoop.TileSize, MainLoop.TileSize);
             BlockSprite.rectDest.Width = MainLoop.TileSize;
             BlockSprite.rectDest.Height = MainLoop.TileSize;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
 
             float randomSize = Utils.Rng.Next(0, 2) / 10f;
             BlockSprite.scaleX = 0.3f + randomSize;

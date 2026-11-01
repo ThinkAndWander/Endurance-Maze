@@ -104,10 +104,10 @@ namespace Maze
         {
             this.sprite = sprite;
 
-            //basicAnimated or Animated are required to function.
-            if (this.sprite.drawBehavior == SpriteDraw.basic)
+            /// <see cref="SpriteDraw.BasicAnimated"/> or better is required to function.
+            if (this.sprite.drawBehavior == SpriteDraw.Basic)
             {
-                this.sprite.drawBehavior = SpriteDraw.basicAnimated;
+                this.sprite.drawBehavior = SpriteDraw.BasicAnimated;
             }
 
             sprite.rectSrc.Width = frameWidth;
@@ -142,10 +142,10 @@ namespace Maze
         {
             this.sprite = sprite;
 
-            //basicAnimated or Animated are required to function.
-            if (this.sprite.drawBehavior == SpriteDraw.basic)
+            /// <see cref="SpriteDraw.BasicAnimated"/> or better is required to function.
+            if (this.sprite.drawBehavior == SpriteDraw.Basic)
             {
-                this.sprite.drawBehavior = SpriteDraw.basicAnimated;
+                this.sprite.drawBehavior = SpriteDraw.BasicAnimated;
             }
 
             this.frameWidth = frameWidth;
@@ -189,10 +189,10 @@ namespace Maze
         {
             this.sprite = sprite;
 
-            //basicAnimated or Animated are required to function.
-            if (this.sprite.drawBehavior == SpriteDraw.basic)
+            /// <see cref="SpriteDraw.BasicAnimated"/> or better is required to function.
+            if (this.sprite.drawBehavior == SpriteDraw.Basic)
             {
-                this.sprite.drawBehavior = SpriteDraw.basicAnimated;
+                this.sprite.drawBehavior = SpriteDraw.BasicAnimated;
             }
 
             this.frameWidth = frameWidth;

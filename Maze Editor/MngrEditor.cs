@@ -1380,7 +1380,7 @@ namespace Maze
             //Sets up a text outline to be used by all buttons.
             SpriteText tempText = new SpriteText(game.fntBold, "");
             tempText.color = Color.Black;
-            tempText.drawBehavior = SpriteDraw.all;
+            tempText.drawBehavior = SpriteDraw.All;
 
             if (activeItem == null)
             {

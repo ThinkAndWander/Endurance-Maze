@@ -135,7 +135,7 @@ namespace Maze
                 {
                     color = Color.Black,
                     depth = 0.009f,
-                    drawBehavior = SpriteDraw.all,
+                    drawBehavior = SpriteDraw.All,
                     position = BlockSprite.rectDest.Center
                 };
 
@@ -157,7 +157,7 @@ namespace Maze
                 case Type.Actor:
                     BlockSprite = new Sprite(true, MazeActor.TexActor);
                     BlockSprite.depth = 0.1f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 6, 2, 3);
                     #region Chooses sprite by direction.
                     if (BlockDir == Dir.Right)
@@ -186,7 +186,7 @@ namespace Maze
                     BlockSprite = new Sprite(true, MazeBelt.TexBelt);
                     BlockSprite.depth = 0.401f;
                     BlockSprite.doDrawOffset = true;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 9, 1, 9);
                     BlockSpriteAtlas.CenterOrigin();
                     #region Chooses sprite by direction and isEnabled.
@@ -230,7 +230,7 @@ namespace Maze
                     //Sets sprite information.
                     BlockSprite = new Sprite(true, MazeClick.TexClick);
                     BlockSprite.depth = 0.201f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 2, 1, 2);
                     #region Adjusts sprite and handles growing/shrinking animation.
                     if (IsEnabled)
@@ -259,7 +259,7 @@ namespace Maze
                     BlockSprite.rectSrc = new SmoothRect(0, 0, MainLoop.TileSize, MainLoop.TileSize);
                     BlockSprite.rectDest.Width = MainLoop.TileSize;
                     BlockSprite.rectDest.Height = MainLoop.TileSize;
-                    BlockSprite.drawBehavior = SpriteDraw.basicAnimated;
+                    BlockSprite.drawBehavior = SpriteDraw.BasicAnimated;
                     break;
                 case Type.CrateHole:
                     BlockSprite = new Sprite(true, MazeCrateHole.TexCrateHole);
@@ -291,7 +291,7 @@ namespace Maze
                 case Type.Enemy:
                     BlockSprite = new Sprite(true, MazeEnemy.TexEnemy);
                     BlockSprite.depth = 0.4f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 4, 1, 4);
                     #region Chooses sprite by direction and isEnabled.
                     if (Utils.DirCardinal(BlockDir))
@@ -321,7 +321,7 @@ namespace Maze
                 case Type.EPusher:
                     BlockSprite = new Sprite(true, MazeEPusher.TexEPusher);
                     BlockSprite.depth = 0.415f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize * 2, MainLoop.TileSize, 3, 1, 3);
                     BlockSprite.doDrawOffset = true;
                     BlockSprite.origin.X = MainLoop.TileSizeHalf;
@@ -357,7 +357,7 @@ namespace Maze
                     BlockSprite = new Sprite(true, MazeFilter.TexFilter);
                     BlockSprite.depth = 0.405f;
                     BlockSprite.doDrawOffset = true;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 19, 2, 10);
                     BlockSpriteAtlas.CenterOrigin();
                     #region Chooses frame speed by isEnabled.
@@ -384,7 +384,7 @@ namespace Maze
                     BlockSprite = new Sprite(true, MazeFreeze.TexFreeze);
                     BlockSprite.depth = 0.203f;
                     BlockSprite.doDrawOffset = true;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 10, 1, 10);
                     BlockSpriteAtlas.frameSpeed = 0.4f;
                     BlockSpriteAtlas.CenterOrigin();
@@ -402,7 +402,7 @@ namespace Maze
                     BlockSprite = new Sprite(true, MazeGoal.TexGoal);
                     BlockSprite.depth = 0.202f;
                     BlockSprite.doDrawOffset = true;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 9, 1, 9);
                     BlockSpriteAtlas.frameSpeed = 0.2f;
                     BlockSpriteAtlas.CenterOrigin();
@@ -420,7 +420,7 @@ namespace Maze
                 case Type.Key:
                     BlockSprite = new Sprite(true, MazeKey.TexKey);
                     BlockSprite.depth = 0.207f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 19, 2, 10);
                     BlockSpriteAtlas.frameSpeed = 0.2f;
                     #region Chooses key color by custInt1.
@@ -473,7 +473,7 @@ namespace Maze
                 case Type.Lock:
                     BlockSprite = new Sprite(true, MazeLock.TexLock);
                     BlockSprite.depth = 0.407f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     #region Chooses lock color by custInt1.
                     switch (SlotValueInt1)
                     {
@@ -516,7 +516,7 @@ namespace Maze
                     break;
                 case Type.Mirror:
                     BlockSprite = new Sprite(true, MazeMirror.TexMirror);
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSprite.depth = 0.420f;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 4, 1, 4);
                     if (BlockDir == Dir.Right)
@@ -540,7 +540,7 @@ namespace Maze
                     BlockSprite = new Sprite(true, MazeMultiWay.TexMultiWay);
                     BlockSprite.depth = 0.408f;
                     BlockSprite.doDrawOffset = true;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 4, 1, 4);
                     BlockSpriteAtlas.CenterOrigin();
                     #region Chooses sprite by direction and frame.
@@ -587,7 +587,7 @@ namespace Maze
                     BlockSprite = new Sprite(true, MazeRotate.TexRotate);
                     BlockSprite.depth = 0.418f;
                     BlockSprite.doDrawOffset = true;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 2, 1, 2);
                     BlockSpriteAtlas.CenterOrigin();
                     #region Adjusts sprite.
@@ -604,7 +604,7 @@ namespace Maze
                 case Type.Spawner:
                     BlockSprite = new Sprite(true, MazeSpawner.TexSpawner);
                     BlockSprite.depth = 0.402f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 8, 2, 4);
                     #region Chooses sprite by direction and isEnabled.
                     if (BlockDir == Dir.Right)
@@ -632,7 +632,7 @@ namespace Maze
                 case Type.Spike:
                     BlockSprite = new Sprite(true, MazeSpike.TexSpike);
                     BlockSprite.depth = 0.409f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSprite.doDrawOffset = true;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 19, 2, 10);
                     BlockSpriteAtlas.frameSpeed = 0.2f;
@@ -684,7 +684,7 @@ namespace Maze
                 case Type.Turret:
                     BlockSprite = new Sprite(true, MazeTurret.TexTurret);
                     BlockSprite.depth = 0.419f;
-                    BlockSprite.drawBehavior = SpriteDraw.all;
+                    BlockSprite.drawBehavior = SpriteDraw.All;
                     BlockSpriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 8, 2, 4);
                     #region Chooses sprite by direction and isEnabled.
                     if (BlockDir == Dir.Right)

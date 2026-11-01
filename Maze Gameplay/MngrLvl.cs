@@ -1257,6 +1257,8 @@ namespace Maze
                     continue;
                 }
 
+                if (item.TileSystem == TilingSystem.FiveTile && item.)
+
                 // Draw decor only for same layer.
                 // Draws non-decor for same/above/below layer.
                 if (item.IsDecor)
@@ -1280,14 +1282,14 @@ namespace Maze
             SpriteText hudHp = new(game.fntBold, actor.hp.ToString());
             hudHp.CenterOriginHor();
             hudHp.color = Color.LightPink;
-            hudHp.drawBehavior = SpriteDraw.all;
+            hudHp.drawBehavior = SpriteDraw.All;
             hudHp.position = new Vector2(MainLoop.TileSizeHalf,
                 (int)game.GetScreenSize().Y - MainLoop.TileSize + 18); // 18 is ad-hoc visual balancing.
 
             SpriteText hudCoins = new(game.fntBold, ActorCoins.ToString());
             hudCoins.CenterOriginHor();
             hudCoins.color = Color.Yellow;
-            hudCoins.drawBehavior = SpriteDraw.all;
+            hudCoins.drawBehavior = SpriteDraw.All;
             hudCoins.position = new Vector2(MainLoop.TileSize + MainLoop.TileSizeHalf,
                 (int)game.GetScreenSize().Y - MainLoop.TileSize + 18); // 18 is ad-hoc visual balancing.
 

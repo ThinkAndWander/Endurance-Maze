@@ -26,7 +26,7 @@ namespace Maze
             BlockSprite.rectSrc = new SmoothRect(0, 0, MainLoop.TileSize, MainLoop.TileSize);
             BlockSprite.rectDest.Width = MainLoop.TileSize;
             BlockSprite.rectDest.Height = MainLoop.TileSize;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 4, 1, 4);
             spriteAtlas.CenterOrigin();
             spriteAtlas.frame = 1;

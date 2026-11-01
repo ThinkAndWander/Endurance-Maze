@@ -35,7 +35,7 @@ namespace Maze
             BlockSprite = new Sprite(true, TexBelt);
             BlockSprite.depth = 0.401f;
             BlockSprite.doDrawOffset = true;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
 
             //Custom variables.
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 9, 1, 9);

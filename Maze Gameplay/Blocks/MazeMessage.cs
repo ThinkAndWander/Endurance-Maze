@@ -90,7 +90,7 @@ namespace Maze
                 {
                     color = Microsoft.Xna.Framework.Color.White,
                     depth = 0.009f,
-                    drawBehavior = SpriteDraw.all,
+                    drawBehavior = SpriteDraw.All,
                     position = BlockSprite.rectDest.Center,
                     alpha = TextAlpha
                 };

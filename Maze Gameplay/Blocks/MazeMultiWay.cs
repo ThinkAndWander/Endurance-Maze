@@ -39,7 +39,7 @@ namespace Maze
             BlockSprite = new Sprite(true, TexMultiWay);
             BlockSprite.depth = 0.408f;
             BlockSprite.doDrawOffset = true;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 4, 1, 4);
             spriteAtlas.CenterOrigin();
         }

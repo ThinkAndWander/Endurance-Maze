@@ -39,7 +39,7 @@ namespace Maze
             //Sets sprite information.
             BlockSprite = new Sprite(true, TexSpawner);
             BlockSprite.depth = 0.402f;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 8, 2, 4);
 
             // Solids generally occlude.

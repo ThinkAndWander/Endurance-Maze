@@ -37,7 +37,7 @@ namespace Maze
             //Sets sprite information.
             BlockSprite = new Sprite(true, TexCoinLock);
             BlockSprite.depth = 0.410f;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
 
             // Solids generally occlude.
             Lighting = new(null, new(TileHull));

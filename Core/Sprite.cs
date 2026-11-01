@@ -75,7 +75,18 @@ namespace Maze
         /// <summary>
         /// Affects how extensive the drawing is.
         /// </summary>
-        public SpriteDraw drawBehavior = SpriteDraw.basic;
+        public SpriteDraw drawBehavior = SpriteDraw.Basic;
+
+        /// <summary>
+        /// This determines the connection rules to use.
+        /// </summary>
+        public TilingSystem tileSystem;
+
+        /// <summary>
+        /// Sprites with matching tile slots are considered compatible in terms of
+        /// connections.
+        /// </summary>
+        public int[] tileSlots;
         #endregion
 
         #region Constructors
@@ -282,47 +293,50 @@ namespace Maze
                 yPos += origin.Y;
             }
 
-            switch (drawBehavior)
+            if (drawBehavior == SpriteDraw.Basic)
             {
-                case (SpriteDraw.basic):
+                spriteBatch.Draw(
+                    texture,
+                    new Rectangle(
+                        (int)xPos,
+                        (int)yPos,
+                        (int)(rectDest.Width * scaleX),
+                        (int)(rectDest.Height * scaleY)
+                        ),
+                    color * alpha);
+            }
+            else if (tileSystem == TilingSystem.None)
+            {
+                Rectangle rect = new((int)xPos, (int)yPos, (int)(rectDest.Width * scaleX), (int)(rectDest.Height * scaleY));
+
+                if (drawBehavior == SpriteDraw.BasicAnimated)
+                {
                     spriteBatch.Draw(
-                        texture,
-                        new Rectangle(
-                            (int)xPos,
-                            (int)yPos,
-                            (int)(rectDest.Width * scaleX),
-                            (int)(rectDest.Height * scaleY)
-                            ),
-                        color * alpha);
-                    break;
-                case (SpriteDraw.basicAnimated):
+                        texture, rect, rectSrc.ToRect(), color * alpha);
+                }
+                else if (drawBehavior == SpriteDraw.All)
+                {
                     spriteBatch.Draw(
-                        texture,
-                        new Rectangle(
-                            (int)xPos,
-                            (int)yPos,
-                            (int)(rectDest.Width * scaleX),
-                            (int)(rectDest.Height * scaleY)
-                            ),
-                        rectSrc.ToRect(),
-                        color * alpha);
-                    break;
-                case (SpriteDraw.all):
-                    spriteBatch.Draw(
-                        texture,
-                        new Rectangle(
-                            (int)xPos,
-                            (int)yPos,
-                            (int)(rectDest.Width * scaleX),
-                            (int)(rectDest.Height * scaleY)
-                            ),
-                        rectSrc.ToRect(),
-                        color * alpha,
-                        angle,
-                        origin,
-                        spriteEffects,
-                        0);
-                    break;
+                        texture, rect, rectSrc.ToRect(), color * alpha, angle, origin, spriteEffects, 0);
+                }
+            }
+            else if (drawBehavior == SpriteDraw.BasicAnimated && tileSystem == TilingSystem.FiveTile)
+            {
+                int halfWidth = (int)(rectDest.Width * scaleX / 2f);
+                int halfHeight = (int)(rectDest.Height * scaleY / 2f);
+                Rectangle dstTopLeft = new((int)xPos, (int)yPos, halfWidth, halfHeight);
+                Rectangle dstTopRight = new((int)xPos + halfWidth, (int)yPos, halfWidth, halfHeight);
+                Rectangle dstBottomLeft = new((int)xPos, (int)yPos + halfHeight, halfWidth, halfHeight);
+                Rectangle dstBottomRight = new((int)xPos + halfWidth, (int)yPos + halfHeight, halfWidth, halfHeight);
+
+                if (drawBehavior == SpriteDraw.BasicAnimated)
+                {
+                    spriteBatch.Draw(texture, dstTopLeft, SOURCE_RECT, color * alpha);
+                }
+                else if (drawBehavior == SpriteDraw.All)
+                {
+
+                }
             }
         }
         #endregion

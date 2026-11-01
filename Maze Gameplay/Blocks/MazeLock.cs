@@ -42,7 +42,7 @@ namespace Maze
             //Sets sprite information.
             BlockSprite = new Sprite(true, TexLock);
             BlockSprite.depth = 0.407f;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
         }
 
         /// <summary>

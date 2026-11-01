@@ -15,7 +15,7 @@ namespace Maze
         public float alpha; //alpha blending (default 1).
         public SpriteEffects spriteEffects; //Represents image mirroring.
         public float scale = 1; //a width and height multiplier.
-        public SpriteDraw drawBehavior = SpriteDraw.basic; //Image drawing.
+        public SpriteDraw drawBehavior = SpriteDraw.Basic; //Image drawing.
                        
         /// <summary>
         /// Initializes an empty text sprite. The font must be set before 
@@ -86,7 +86,7 @@ namespace Maze
                 yPos += origin.Y;
             }
 
-            if (drawBehavior == SpriteDraw.basic)
+            if (drawBehavior == SpriteDraw.Basic)
             {
                 spriteBatch.DrawString(font, text, position, color);
             }

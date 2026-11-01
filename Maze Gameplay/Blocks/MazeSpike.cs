@@ -37,7 +37,7 @@ namespace Maze
             //Sets sprite information.
             BlockSprite = new Sprite(true, TexSpike);
             BlockSprite.depth = 0.409f;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             BlockSprite.doDrawOffset = true;
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 19, 2, 10);
             spriteAtlas.frameSpeed = 0.2f;

@@ -44,7 +44,7 @@ namespace Maze
             BlockSprite = new Sprite(true, TexRotate);
             BlockSprite.depth = 0.418f;
             BlockSprite.doDrawOffset = true;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 2, 1, 2);
             spriteAtlas.CenterOrigin();
 

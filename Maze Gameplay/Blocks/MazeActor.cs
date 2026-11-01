@@ -73,7 +73,7 @@ namespace Maze
             //Sets sprite information.
             BlockSprite = new Sprite(true, TexActor);
             BlockSprite.depth = 0.1f;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 18, 2, 9);
 
             //Sets the initial position.

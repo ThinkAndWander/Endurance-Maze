@@ -49,7 +49,7 @@ namespace Maze
             //Sets sprite information.
             BlockSprite = new Sprite(true, TexKey);
             BlockSprite.depth = 0.207f;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
             spriteAtlas = new SpriteAtlas(BlockSprite, MainLoop.TileSize, MainLoop.TileSize, 19, 2, 10);
             spriteAtlas.frameSpeed = 0.2f;
         }

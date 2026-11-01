@@ -48,7 +48,7 @@ namespace Maze
 
             //Sets up the relevant sprite.
             BttnSprite = new Sprite(true, tex);
-            BttnSprite.drawBehavior = SpriteDraw.all;
+            BttnSprite.drawBehavior = SpriteDraw.All;
 
             BttnSpriteAtlas = new SpriteAtlas(BttnSprite, 112, 28, 16, 4, 4);
             BttnSpriteAtlas.frame = frame;

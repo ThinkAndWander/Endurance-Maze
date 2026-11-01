@@ -30,7 +30,7 @@ namespace Maze
             BlockSprite.rectSrc = new SmoothRect(MainLoop.TileSize * 2, 0, MainLoop.TileSize, MainLoop.TileSize);
             BlockSprite.rectDest.Width = MainLoop.TileSize;
             BlockSprite.rectDest.Height = MainLoop.TileSize;
-            BlockSprite.drawBehavior = SpriteDraw.all;
+            BlockSprite.drawBehavior = SpriteDraw.All;
 
             alphaDegradeSpeed = 0.05f + (Utils.Rng.Next(3) / 20f);
             this.xySpeed = xySpeed;
